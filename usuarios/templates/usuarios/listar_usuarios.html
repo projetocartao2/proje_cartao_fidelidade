@@ -1,0 +1,28 @@
+{% extends 'usuarios/base.html' %}
+
+{% block titulo %}
+  Lista de usuarios
+{% endblock %}
+
+{% block conteudo %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cpf</th>
+                <th>Data de nascimento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usu in usuarios %}
+            <tr>
+                <td>{{usu.nome }}</td>
+                <td>{{usu.cpf }}</td>
+                <td>{{usu.data_nascimento }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
